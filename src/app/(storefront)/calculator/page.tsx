@@ -20,7 +20,8 @@ export default function CalculatorPage() {
     { id: "1", name: "Room 1", length: "", width: "" },
   ])
   const [wastePercentage, setWastePercentage] = useState("10")
-  const [tileSize, setTileSize] = useState("custom") // custom or preset sizes
+  // tileSize state reserved for future preset tile size feature
+  void useState("custom")
 
   const addRoom = () => {
     setRooms([

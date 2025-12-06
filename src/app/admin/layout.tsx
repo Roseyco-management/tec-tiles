@@ -21,7 +21,6 @@ import {
   MessageSquare,
   Percent,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 const sidebarItems = [

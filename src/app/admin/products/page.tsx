@@ -9,7 +9,6 @@ import {
   Plus,
   Edit,
   Trash2,
-  MoreHorizontal,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react"

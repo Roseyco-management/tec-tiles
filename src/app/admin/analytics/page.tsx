@@ -3,10 +3,8 @@
 import {
   TrendingUp,
   TrendingDown,
-  Users,
   ShoppingCart,
   Eye,
-  MousePointer,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
