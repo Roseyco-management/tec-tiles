@@ -3,7 +3,6 @@ import Image from "next/image"
 import { Metadata } from "next"
 import { categories, getAllProducts } from "@/lib/mock-data"
 import { ProductCard } from "@/components/product/ProductCard"
-import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
   title: "Shop All Tiles",
