@@ -42,7 +42,7 @@ export function Footer() {
               alt={siteConfig.name}
               width={120}
               height={40}
-              className="h-10 w-auto mb-4 brightness-0 invert"
+              className="h-10 w-auto mb-4"
             />
             <p className="text-sm text-white/70 mb-4">
               Premium tiles and flooring for your home. Quality products at competitive prices with expert advice.

@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Eye, EyeOff, Mail, Lock } from "lucide-react"
+import { useRouter } from "next/navigation"
+import { Eye, EyeOff, Mail, Lock, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -11,6 +12,13 @@ import { Separator } from "@/components/ui/separator"
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
+  const router = useRouter()
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Demo: redirect to account page
+    router.push("/account")
+  }
 
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-muted/30 py-12">
@@ -23,7 +31,7 @@ export default function LoginPage() {
             </p>
           </div>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <Label htmlFor="email">Email Address</Label>
               <div className="relative mt-1">
@@ -111,6 +119,17 @@ export default function LoginPage() {
               Continue with Google
             </Button>
           </div>
+
+          <Separator className="my-6" />
+
+          {/* Admin Login Link */}
+          <Link
+            href="/admin/login"
+            className="flex items-center justify-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Shield className="h-4 w-4" />
+            Admin Login
+          </Link>
 
           <p className="text-center text-sm text-muted-foreground mt-6">
             Don&apos;t have an account?{" "}

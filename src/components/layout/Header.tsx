@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
-import { Search, ShoppingCart, User, Menu, X } from "lucide-react"
+import { Search, ShoppingCart, User, Menu, X, Calculator } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -35,6 +35,13 @@ export function Header() {
                     {link.name}
                   </Link>
                 ))}
+                <Link
+                  href="/calculator"
+                  className="text-lg font-medium hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  <Calculator className="h-5 w-5" />
+                  Tile Calculator
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
@@ -94,8 +101,16 @@ export function Header() {
               </Button>
             )}
 
+            {/* Calculator */}
+            <Link href="/calculator" className="hidden sm:block">
+              <Button variant="ghost" size="icon">
+                <Calculator className="h-5 w-5" />
+                <span className="sr-only">Tile Calculator</span>
+              </Button>
+            </Link>
+
             {/* Account */}
-            <Link href="/account">
+            <Link href="/account/login">
               <Button variant="ghost" size="icon">
                 <User className="h-5 w-5" />
                 <span className="sr-only">Account</span>
